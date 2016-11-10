@@ -17,13 +17,17 @@ public class BowlingTest {
 
     @Test
     public void gutterGame() {
-        IntStream.rangeClosed(1, 20).forEach(value -> game.roll(0));
+        roll(20, 0);
         assertThat(game.score(), is(0));
     }
 
     @Test
     public void allOnes() {
-        IntStream.rangeClosed(1, 20).forEach(value -> game.roll(1));
+        roll(20, 1);
         assertThat(game.score(), is(20));
+    }
+
+    private void roll(int rolls, int pins) {
+        IntStream.rangeClosed(1, rolls).forEach(value -> game.roll(pins));
     }
 }
