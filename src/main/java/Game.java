@@ -9,13 +9,13 @@ public class Game {
 
     public int score() {
         int score = 0;
-        int roll = 0;
+        int firstFrame = 0;
         for(int frame = 0; frame < FRAMES; frame++) {
-            score += rolls[roll] + rolls[roll + 1];
-            if(rolls[roll] + rolls[roll + 1] == 10)
-                score += rolls[roll + 2];
+            score += rolls[firstFrame] + rolls[firstFrame + 1];
+            if(rolls[firstFrame] + rolls[firstFrame + 1] == 10)
+                score += rolls[firstFrame + 2];
 
-            roll += 2;
+            firstFrame += 2;
         }
         return score;
     }
