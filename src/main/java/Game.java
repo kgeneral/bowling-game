@@ -1,12 +1,12 @@
 
 public class Game {
 
-    private int total = 0;
-    public void roll(int score) {
-        total += score;
+    private int score = 0;
+    public void roll(int pins) {
+        score += pins;
     }
 
     public int score() {
-        return total;
+        return score;
     }
 }
