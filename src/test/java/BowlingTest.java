@@ -16,7 +16,7 @@ public class BowlingTest {
     }
 
     @Test
-    public void canRoll() {
+    public void gutterGame() {
         IntStream.rangeClosed(1, 20).forEach(value -> game.roll(0));
         assertThat(game.score(), is(0));
     }
