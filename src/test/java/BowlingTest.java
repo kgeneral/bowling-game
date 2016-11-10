@@ -27,6 +27,15 @@ public class BowlingTest {
         assertThat(game.score(), is(20));
     }
 
+    @Test
+    public void oneSpare() {
+        game.roll(5);
+        game.roll(5); // spare
+        game.roll(3);
+        roll(17, 0);
+        assertThat(game.score(), is(16));
+    }
+
     private void roll(int rolls, int pins) {
         IntStream.rangeClosed(1, rolls).forEach(value -> game.roll(pins));
     }
