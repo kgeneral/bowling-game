@@ -12,6 +12,9 @@ public class Game {
         int roll = 0;
         for(int frame = 0; frame < FRAMES; frame++) {
             score += rolls[roll] + rolls[roll + 1];
+            if(rolls[roll] + rolls[roll + 1] == 10)
+                score += rolls[roll + 2];
+
             roll += 2;
         }
         return score;

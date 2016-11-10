@@ -1,5 +1,4 @@
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.stream.IntStream;
@@ -29,7 +28,6 @@ public class BowlingTest {
     }
 
     @Test
-    @Ignore
     public void oneSpare() {
         game.roll(5);
         game.roll(5); // spare
