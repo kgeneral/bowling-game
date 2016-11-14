@@ -44,6 +44,12 @@ public class BowlingTest {
         assertThat(game.score(), is(26));
     }
 
+    @Test
+    public void perfectGame() {
+        roll(12, 10);
+        assertThat(game.score(), is(300));
+    }
+
     private void rollSpare() {
         game.roll(5);
         game.roll(5);
